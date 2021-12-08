@@ -28,17 +28,16 @@ function App() {
 
           <div className="one__row grid__3">
             {data.products.map(
-              ({ _id, title, image, rating, price }, index) => {
-                console.log(_id);
-
+              (/* { _id, title, image, rating, price }, index */ product) => {
                 return (
-                  <div key={index}>
+                  <div key={product._id}>
                     <Product
-                      title={title}
+                      /* title={title}
                       image={image}
                       price={price}
                       rating={rating}
-                      id={_id}
+                      id={_id} */
+                      product={product}
                     />
                   </div>
                 );

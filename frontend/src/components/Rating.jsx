@@ -60,7 +60,7 @@ function Rating(props) {
         ></i>
       </span>
 
-      <span className="reviews flex">{reviews}</span>
+      <span className="reviews flex">{reviews} review(s)</span>
     </div>
   );
 }

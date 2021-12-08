@@ -2,9 +2,11 @@ import React from "react";
 import "./Product.css";
 import Rating from "../Rating";
 
-function Product({ title, image, price, rating, reviews, id }) {
+function Product(props) {
+  const { _id, image, title, price, rating, reviews } = props.product;
+
   return (
-    <div key={id} className="product ">
+    <div className="product ">
       <div className="image">
         <img src={image} alt="" />
       </div>
@@ -23,7 +25,7 @@ function Product({ title, image, price, rating, reviews, id }) {
           Add to cart
         </button>
 
-        <a href={`/product/${id}`} className="learn-more">
+        <a href={`/product/${_id}`} className="learn-more">
           Learn more
         </a>
       </div>
